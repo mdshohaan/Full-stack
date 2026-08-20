@@ -1,0 +1,40 @@
+GET http://localhost:4000/health
+
+###
+
+POST  http://localhost:4000
+Content-Type: application/json
+
+{
+"name":"Arif",
+"country":"BD",
+"Rank":6
+}
+
+###
+
+GET  http://localhost:4000
+
+###
+
+GET  http://localhost:4000/FOsMA4iaI
+
+###
+
+PATCH   http://localhost:4000/FOsMA4iaI
+Content-Type: application/json
+
+{
+    "name":"Sakibul Hasan"
+}
+
+###
+PUT    http://localhost:4000/yyh2UH-ZV
+Content-Type: application/json
+
+{
+"name": "Tamim Iqbal",
+"country": "BNP",
+"Rank": 17,
+"id": "yyh2UH-ZV"
+}
