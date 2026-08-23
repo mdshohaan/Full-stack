@@ -36,6 +36,24 @@ app.put("/:id", async (req, res) => {
   res.status(200).json(player);
 });
 
+app.delete("/:id", async (req, res) => {
+  const id = req.params.id;
+
+  const data = await fs.readFile(dbLocation, "utf-8");
+  const players = JSON.parse(data);
+
+  let player = players.find((item) => item.id === id);
+
+  if (!player) {
+    res.status(404).json({ message: "Player Not Found" });
+  }
+
+  const newPlayers = players.filter((item) => item.id !== id);
+  await fs.writeFile(dbLocation, JSON.stringify(newPlayers));
+
+  res.status(203).send();
+});
+
 app.patch("/:id", async (req, res) => {
   const id = req.params.id;
   const data = await fs.readFile(dbLocation, "utf-8");
