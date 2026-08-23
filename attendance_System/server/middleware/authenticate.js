@@ -24,7 +24,3 @@ async function authenticate(req, res, next) {
 }
 
 module.exports = authenticate;
-/**
- * Encode → data-কে অন্য format-এ রূপান্তর করা
- * Decode → সেই encoded data থেকে readable data বের করা
- */
