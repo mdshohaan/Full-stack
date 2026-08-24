@@ -6,7 +6,7 @@ const userController = require("../controller/users");
 
 router.use("/api/v1/auth", authRoutes);
 
-router.use("/api/v1/users", userController.postUser);
+// router.use("/api/v1/users", userController.postUser);
 
 router.use("/api/v1/users", authenticate, usersRoutes);
 

@@ -22,4 +22,8 @@ const createNewUser = ({ name, email, password, roles, accountStatus }) => {
   return user.save();
 };
 
-module.exports = { findUserByproperty, createNewUser, findUsers };
+const updateUser = (id, data) => {
+  return User.findByIdAndUpdate(id, { ...data }, { new: true });
+};
+
+module.exports = { findUserByproperty, createNewUser, findUsers, updateUser };
