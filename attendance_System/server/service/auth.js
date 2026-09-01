@@ -35,7 +35,7 @@ const loginService = async ({ email, password }) => {
   };
 
   // JWT Token
-  return jwt.sign(payload, "secret-key", { expiresIn: "2h" });
+  return jwt.sign(payload, "secret-key", { expiresIn: "12h" });
 };
 
 module.exports = { registerService, loginService };

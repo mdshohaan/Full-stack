@@ -7,7 +7,7 @@ const adminAttendanceSchema = new Schema(
       type: String,
       required: true,
       enum: ["RUNNING", "COMPLETED"],
-      default: "COMPLETED",
+      default: "RUNNING",
     },
   },
   { timestamps: true },
