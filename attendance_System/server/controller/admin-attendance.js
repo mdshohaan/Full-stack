@@ -2,7 +2,7 @@ const adminAttendance = require("../models/AdminAttendance");
 const { error } = require("../utils/error");
 const { addMinutes, isAfter } = require("date-fns");
 
-const getEnable = async (req, res, next) => {
+const getEnable = async (_req, res, next) => {
   try {
     const runningAttendance = await adminAttendance.findOne({
       status: "RUNNING",
@@ -21,7 +21,7 @@ const getEnable = async (req, res, next) => {
   }
 };
 
-const getDisable = async (req, res, next) => {
+const getDisable = async (_req, res, next) => {
   try {
     const attendance = await adminAttendance.findOne({ status: "RUNNING" });
     if (!attendance) {
@@ -38,7 +38,7 @@ const getDisable = async (req, res, next) => {
   }
 };
 
-const getStatus = async (req, res, next) => {
+const getStatus = async (_req, res, next) => {
   try {
     const runningAttendance = await adminAttendance.findOne({
       status: "RUNNING",
