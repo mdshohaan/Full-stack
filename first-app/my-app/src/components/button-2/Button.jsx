@@ -1,3 +1,7 @@
+// /components/button/Button.jsx
+
+import classes from "./Button.module.css";
+
 const variant = {
   primary: {
     backgroundColor: "#2196f3",
@@ -28,21 +32,13 @@ const sizes = {
 };
 
 const Button = (props) => {
-  // console.log(props);
-  // const size = sizes[props.size];
+  //   const userVariant = variant[props.variant];
+  //   const userSize = sizes[props.size];
   return (
     <button
       type={props.type}
+      className={classes.button}
       style={{
-        padding: "1rem 2rem",
-        fontSize: "0.9rem",
-        fontWeight: "700",
-        textTransform: "uppercase",
-        letterSpacing: "1px",
-        border: "none",
-        marginRight: "1rem",
-        cursor: "pointer",
-        borderRadius: "0.15rem",
         ...variant[props.variant],
         ...sizes[props.size],
       }}

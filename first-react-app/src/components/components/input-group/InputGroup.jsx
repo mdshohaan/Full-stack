@@ -1,7 +1,7 @@
 // InputGroup.jsx
 
 const InputGroup = (props) => {
-  const label = props.label;
+  // const label = props.label;
   const type = props.type;
   //   console.log(props);
   return (
@@ -22,7 +22,7 @@ const InputGroup = (props) => {
         }}
         htmlFor="name"
       >
-        {label}
+        {props.label}
       </label>
       <input
         style={{
