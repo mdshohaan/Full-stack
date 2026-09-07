@@ -9,8 +9,13 @@ const About = () => {
   const [incrementValue, setIncrementValue] = useState(5);
   const [decrementValue, setIDecrementValue] = useState(5);
 
+  const o = count || 50;
+  console.log(o);
+  count && console.log("Count has value");
+
   function increment() {
-    setCount(count + incrementValue);
+    setCount(count + incrementValue); // Or
+    // setCount((count) => count + incrementValue);
   }
   function decrement() {
     setCount(count - decrementValue);
