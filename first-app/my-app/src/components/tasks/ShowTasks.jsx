@@ -1,10 +1,14 @@
-const ShowTasks = ({ tasks }) => {
+const ShowTasks = ({ tasks, toggleComplete }) => {
+  // const dateFormat = (date) => new Date(date).toLocaleDateString();
+
   return (
     <div>
       {tasks.length > 0 ? (
         <ul>
           {tasks.map((task) => (
-            <li key={task.id}>{task.text}</li>
+            <li key={task.id} onClick={() => toggleComplete(task.id)}>
+              {task.text}
+            </li>
           ))}
         </ul>
       ) : (
