@@ -56,10 +56,10 @@ const Tasks = () => {
         <CreateTask addNewTask={addNewTask} />
         <div>
           <button onClick={() => handleVisibility("all")}>All</button>
-          <button button onClick={() => handleVisibility("completed")}>
+          <button onClick={() => handleVisibility("completed")}>
             Completed
           </button>
-          <button button onClick={() => handleVisibility("incompleted")}>
+          <button onClick={() => handleVisibility("incompleted")}>
             Not Completed
           </button>
         </div>
